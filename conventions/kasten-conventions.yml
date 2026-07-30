@@ -1,0 +1,52 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.kasten.io/latest/
+docs: https://docs.kasten.io/latest/api/
+note: >-
+  Cross-cutting API semantics for Veeam Kasten (Kasten K10). K10 is a self-hosted,
+  Kubernetes-native platform: its primary programmable surface is the set of
+  Kubernetes Custom Resources it installs (Policy, RestorePoint, BackupAction,
+  RestoreAction, ExportAction, and related groups such as *.kio.kasten.io) plus an
+  in-cluster REST API served through the K10 gateway. Because it runs inside the
+  customer's cluster there is no public multi-tenant base URL.
+authentication:
+  style: bearer-token
+  detail: >-
+    Authorization: Bearer <token>, where the token is any credential the Kubernetes
+    API server can verify (typically a ServiceAccount token). See
+    authentication/kasten-authentication.yml.
+resource_model:
+  paradigm: kubernetes-crd
+  detail: >-
+    Objects are Kubernetes Custom Resources reconciled declaratively; standard
+    kubectl create/apply/get/delete semantics apply. A REST API surface mirrors
+    these under the K10 gateway.
+idempotency:
+  supported: partial
+  mechanism: kubernetes-declarative
+  detail: >-
+    Kubernetes resource creation is name-scoped and declarative (apply is
+    idempotent by object name). No dedicated Idempotency-Key HTTP header is
+    documented for the REST surface.
+pagination:
+  style: kubernetes-continue
+  detail: >-
+    List operations follow Kubernetes list semantics (limit + continue token) where
+    applicable.
+versioning:
+  style: semver-product
+  detail: See lifecycle/kasten-lifecycle.yml (product-level MAJOR.MINOR.PATCH).
+error_envelope:
+  style: kubernetes-status
+  detail: >-
+    Errors surface as Kubernetes-style Status objects / HTTP status codes rather
+    than RFC 9457 problem+json.
+rate_limiting:
+  signal: none-documented
+  detail: >-
+    No public rate-limit signaling headers documented; the API is single-tenant and
+    in-cluster.
+cross_links:
+  authentication: authentication/kasten-authentication.yml
+  lifecycle: lifecycle/kasten-lifecycle.yml
+  conformance: conformance/kasten-conformance.yml

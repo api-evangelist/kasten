@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/kastenhq
+docs: https://docs.kasten.io/latest/
+description: >-
+  Veeam Kasten (Kasten K10) ships several first-party command-line tools rather
+  than a single monolithic CLI. Since K10 is deployed in-cluster, most operations
+  are driven through kubectl against K10's Kubernetes CRDs; the dedicated binaries
+  below cover storage validation, install diagnostics, and multi-cluster setup.
+tools:
+  - name: kubestr
+    binary: kubestr
+    repo: https://github.com/kastenhq/kubestr
+    install:
+      - "kubectl krew install kubestr"
+      - "download binary from https://github.com/kastenhq/kubestr/releases"
+    purpose: Identify/validate/evaluate Kubernetes storage and benchmark it.
+    commands:
+      - name: kubestr
+        summary: Assess the cluster's installed storage provisioners and snapshot classes.
+      - name: kubestr fio
+        summary: Run an FIO storage performance benchmark against a StorageClass.
+      - name: kubestr csicheck
+        summary: Validate that a CSI driver supports volume snapshot/restore.
+  - name: k10tools
+    binary: k10tools
+    purpose: Diagnostics and pre-flight validation for a K10 installation.
+    install:
+      - "download binary from Veeam Kasten documentation"
+    commands:
+      - name: k10tools primer
+        summary: Run pre-install/pre-flight environment checks (CSI, snapshots, RBAC).
+      - name: k10tools debug
+        summary: Collect a support/debug bundle from a running K10 instance.
+  - name: k10multicluster
+    binary: k10multicluster
+    purpose: Bootstrap and operate K10 multi-cluster management.
+    install:
+      - "download binary from Veeam Kasten documentation"
+    commands:
+      - name: k10multicluster setup
+        summary: Configure a primary K10 cluster for multi-cluster management.
+      - name: k10multicluster cluster
+        summary: Join/manage secondary clusters under the primary.

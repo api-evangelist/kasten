@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/kastenhq
+note: >-
+  Veeam Kasten (Kasten K10) is a self-hosted, Kubernetes-native platform. It does
+  not publish a language-specific client SDK for its in-cluster REST API; instead
+  the kastenhq GitHub organization maintains first-party open-source CLI/tooling
+  and the Kopia backup engine that ships inside K10. Packages below are the
+  first-party open-source distributions, not REST API client libraries.
+packages:
+  - language: go
+    registry: github
+    name: kubestr
+    url: https://github.com/kastenhq/kubestr
+    install: "krew: kubectl krew install kubestr  |  or download binary from GitHub releases"
+    description: >-
+      CLI to identify, validate and evaluate Kubernetes storage (CSI provisioners,
+      volume snapshot capability) and run FIO storage performance benchmarks.
+    official: true
+  - language: go
+    registry: github
+    name: kopia
+    url: https://github.com/kastenhq/kopia
+    install: "brew install kopia  |  or download from GitHub releases"
+    description: >-
+      Fast, secure, open-source backup/restore engine (content-addressable,
+      deduplicated, encrypted). Maintained by Kasten and used as the data mover
+      inside Veeam Kasten.
+    official: true
+  - language: go
+    registry: github
+    name: k10multicluster
+    url: https://docs.kasten.io/latest/
+    install: "download binary from Veeam Kasten docs (external-tools)"
+    description: >-
+      Command-line tool to bootstrap and operate K10 multi-cluster management
+      (primary/secondary cluster setup, distributed policies).
+    official: true
+  - language: go
+    registry: github
+    name: k10tools
+    url: https://docs.kasten.io/latest/
+    install: "download binary from Veeam Kasten docs (external-tools)"
+    description: >-
+      Diagnostics/validation CLI for K10 installations (pre-flight primer checks,
+      debug bundle collection, upgrade validation).
+    official: true

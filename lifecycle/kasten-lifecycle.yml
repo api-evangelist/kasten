@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.kasten.io/latest/releasenotes.html
+versioning:
+  scheme: semver
+  current: 9.0.1
+  docs: https://docs.kasten.io/latest/releasenotes.html
+  notes: >-
+    Veeam Kasten follows MAJOR.MINOR.PATCH semantic versioning. Documentation is
+    version-pinned per release (docs.kasten.io/<version>/), with /latest/ tracking
+    the newest GA build. As a self-hosted, in-cluster product each customer runs a
+    specific installed version; there is no single hosted service version.
+release_notes: https://docs.kasten.io/latest/releasenotes.html
+status_page: null
+status_page_note: >-
+  Veeam Kasten is deployed inside the customer's own Kubernetes cluster, so there
+  is no public multi-tenant status page for the software itself.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No formally published API deprecation policy / RFC 8594 Sunset header support
+    was found. Version-level changes are communicated through the dated release
+    notes above.
+deprecated_operations: []

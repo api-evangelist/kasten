@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.kasten.io/latest/releasenotes.html
+scheme: semver
+current_version: 9.0.1
+current_date: '2026-07-14'
+docs: https://docs.kasten.io/latest/releasenotes.html
+entries:
+  - version: 9.0.1
+    date: '2026-07-14'
+    breaking: false
+    highlights:
+      - "Bug fix: generic storage backup and restore operations that failed with an invalid name value error."
+  - version: 9.0.0
+    date: '2026-07-12'
+    breaking: false
+    additions:
+      - "VBR Metadata Support: export Kubernetes metadata to Veeam Backup & Replication repositories."
+      - "Dual export policies (Technical Preview) for multiple backup copies."
+      - "Label-based VM policies for dynamic KubeVirt protection."
+      - "Red Hat ACM Observability integration."
+      - "Pod security hardening with read-only root filesystems."
+      - "Expanded Blueprint hooks supporting custom-resource operators."
+      - "Block-mode data mover improvements (Private Preview)."
+  - version: 8.5.13
+    date: '2026-06-22'
+    breaking: false
+    additions:
+      - "Dual export location capability and VBR integration supporting both metadata and volume-data export."
+  - version: 8.5.0
+    date: '2026-01-08'
+    breaking: false
+    additions:
+      - "VM-Centric Protection Policies (VMs as first-class backup resources)."
+      - "Kubernetes-native file recovery via FileRecoverySession."
+      - "Azure integrations including Key Vault support."
+  - version: 8.0.0
+    date: '2025-05-15'
+    breaking: true
+    highlights:
+      - "Veeam Backup & Replication compatibility expansion; Virtual Machines Dashboard."
+      - "Redesigned Policies interface; self-service cluster migrations."
+      - "Reduced-privilege architecture; multi-architecture support."

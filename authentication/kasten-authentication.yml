@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.kasten.io/latest/access/authentication.html
+docs: https://docs.kasten.io/latest/access/authentication.html
+note: >-
+  Veeam Kasten (Kasten K10) has no public OpenAPI spec to derive from; it is a
+  self-hosted, Kubernetes-native product whose dashboard and REST API sit behind
+  the K10 gateway in-cluster. Authentication is delegated to Kubernetes. This
+  profile is captured from the documented authentication options.
+summary:
+  types: [http, oauth2, openIdConnect]
+  api_key_in: []
+  primary_api_auth: bearer-token (Kubernetes ServiceAccount)
+schemes:
+  - name: TokenAuth
+    type: http
+    scheme: bearer
+    description: >-
+      Token authentication accepts any token the Kubernetes API server can verify
+      (typically a ServiceAccount bearer token from `kubectl create token` or a
+      service-account secret). Always enabled as a secondary auth type so the REST
+      API can be called with an Authorization: Bearer <token> header. This is the
+      primary mechanism for programmatic/API access.
+  - name: BasicAuth
+    type: http
+    scheme: basic
+    description: >-
+      htpasswd-generated username:password credentials supplied via Helm
+      configuration at install time. Dashboard-oriented.
+  - name: OIDC
+    type: openIdConnect
+    description: >-
+      Integrates with an external OpenID Connect provider; extracts the user's ID
+      from the token and uses Kubernetes User Impersonation so user-initiated
+      actions are attributed to the authenticated identity.
+  - name: OpenShiftOAuth
+    type: oauth2
+    description: >-
+      Native integration with the OpenShift OAuth server for clusters running on
+      OpenShift.
+  - name: LDAP
+    type: http
+    scheme: ldap
+    description: >-
+      Authentication through a corporate Active Directory / LDAP directory
+      service.

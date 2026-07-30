@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.kasten.io/latest/access/authentication.html
+note: >-
+  Standards conformance asserted from Veeam Kasten's documented architecture and
+  authentication surface. Kasten K10 is Kubernetes-native: its object model is
+  exposed as Kubernetes Custom Resources served through the aggregated API server,
+  so it follows Kubernetes API conventions rather than shipping its own OpenAPI.
+standards:
+  - id: kubernetes-api-conventions
+    conforms: true
+    evidence: >-
+      K10 exposes its resources as Kubernetes CRDs / aggregated API groups and is
+      driven via kubectl and the Kubernetes API machinery.
+  - id: oidc
+    conforms: true
+    evidence: Dashboard/API authentication supports OpenID Connect providers.
+  - id: oauth2
+    conforms: true
+    evidence: Native OpenShift OAuth server integration for authentication.
+  - id: csi
+    conforms: true
+    evidence: >-
+      Data protection is built on the Kubernetes CSI (Container Storage Interface)
+      volume-snapshot APIs; kubestr validates CSI snapshot capability.
+  - id: rfc9457-problem-details
+    conforms: false
+  - id: fhir-r4
+    conforms: false
+  - id: scim2
+    conforms: false
+  - id: odata
+    conforms: false
