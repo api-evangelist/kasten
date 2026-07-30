@@ -1,8 +1,28 @@
 aid: kasten
 name: Kasten
-description: 'Kasten is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Veeam Kasten (formerly Kasten K10) is an enterprise-grade, Kubernetes-native data
+  protection platform. It delivers backup and recovery, disaster recovery,
+  application mobility, ransomware resilience, and virtual-machine (KubeVirt)
+  protection through policy-driven automation, and runs inside the customer's own
+  Kubernetes cluster. Its programmable surface is a set of Kubernetes Custom
+  Resources (policies, restore points, backup/restore/export actions) plus an
+  in-cluster REST API served through the K10 gateway, authenticated with Kubernetes
+  bearer tokens. Kasten was acquired by Veeam and its brand now sits under Veeam's
+  Kubernetes data-protection line.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://docs.kasten.io/img/docusaurus-social-card.jpg
 url: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +32,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Cybersecurity
+- Kubernetes
+- Backup
+- Disaster Recovery
+- Data Protection
+- Cloud Native
+- DevOps
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +51,49 @@ maintainers:
 common:
 - type: Website
   url: https://kasten.io/
+- type: DeveloperPortal
+  url: https://docs.kasten.io/latest/
+- type: Documentation
+  url: https://docs.kasten.io/latest/
+- type: APIReference
+  url: https://docs.kasten.io/latest/api/
+- type: GettingStarted
+  url: https://docs.kasten.io/latest/install/
+- type: GitHubOrganization
+  url: https://github.com/kastenhq
+- type: Support
+  url: https://community.veeam.com/groups/kubernetes-korner-90
+- type: SignUp
+  url: https://www.veeam.com/products/cloud/kubernetes-backup/download-trial.html
+- type: Pricing
+  url: https://www.veeam.com/products/cloud/kubernetes-data-protection.html
+- type: TermsOfService
+  url: https://www.veeam.com/legal/eula.html
+- type: PrivacyPolicy
+  url: https://www.veeam.com/privacy-notice.html
+- type: ChangeLog
+  url: https://docs.kasten.io/latest/releasenotes.html
+- type: ChangeLog
+  name: Kasten changelog (structured)
+  url: changelog/kasten-changelog.yml
+- type: Lifecycle
+  url: lifecycle/kasten-lifecycle.yml
+- type: Authentication
+  url: authentication/kasten-authentication.yml
+- type: Conventions
+  url: conventions/kasten-conventions.yml
+- type: Conformance
+  url: conformance/kasten-conformance.yml
+- type: Packages
+  url: packages/kasten-packages.yml
+- type: CLI
+  url: cli/kasten-cli.yml
+- type: LLMsTxt
+  url: llms/kasten-llms.txt
+- type: DomainSecurity
+  url: security/kasten-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
