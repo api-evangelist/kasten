@@ -10,6 +10,17 @@ description: >-
   in-cluster REST API served through the K10 gateway, authenticated with Kubernetes
   bearer tokens. Kasten was acquired by Veeam and its brand now sits under Veeam's
   Kubernetes data-protection line.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
