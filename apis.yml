@@ -69,6 +69,11 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/veeam/
+  name: Veeam
+  x-relationship: acquired
+  x-evidence: "Kasten was acquired by Veeam and its brand now sits under Veeam's Kubernetes data-protection line."
 - type: Website
   url: https://kasten.io/
 - type: DeveloperPortal
