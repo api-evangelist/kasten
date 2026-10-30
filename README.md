@@ -64,6 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kasten is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting the enrichment pipeline.
+Veeam Kasten (formerly Kasten K10) is an enterprise-grade, Kubernetes-native data protection platform. It delivers backup and recovery, disaster recovery, application mobility, ransomware resilience, and virtual-machine (KubeVirt) protection through policy-driven automation, and runs inside the customer's own Kubernetes cluster. Its programmable surface is a set of Kubernetes Custom Resources (policies, restore points, backup/restore/export actions) plus an in-cluster REST API served through the K10 gateway, authenticated with Kubernetes bearer tokens. Kasten was acquired by Veeam and its brand now sits under Veeam's Kubernetes data-protection line.
 
-Backed by: insight-partners — https://kasten.io/
+**Areas:** Company · Cybersecurity · Kubernetes · Backup · Disaster Recovery · Data Protection · Cloud-Native · DevOps
+
+## Kasten on APIs.io
+
+Everything profiled for Kasten is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kasten/](https://apis.io/providers/kasten/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kasten Authentication](https://apis.io/security/kasten/kasten-authentication/)
+- [Kasten Domain Security](https://apis.io/security/kasten/kasten-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://kasten.io/)
+- [Documentation](https://docs.kasten.io/latest/)
+- [Getting started](https://docs.kasten.io/latest/install/)
+- [API reference](https://docs.kasten.io/latest/api/)
+- [Pricing](https://www.veeam.com/products/cloud/kubernetes-data-protection.html)
+- [Sign up](https://www.veeam.com/products/cloud/kubernetes-backup/download-trial.html)
+- [Support](https://community.veeam.com/groups/kubernetes-korner-90)
+- [Changelog](https://docs.kasten.io/latest/releasenotes.html)
+- [Terms of service](https://www.veeam.com/legal/eula.html)
+- [Privacy policy](https://www.veeam.com/privacy-notice.html)
+- [GitHub](https://github.com/kastenhq)
+
+## API Evangelist rating
+
+**Kin Score 27.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 44.7 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kasten/](https://apis.io/providers/kasten/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kasten: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kasten/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
